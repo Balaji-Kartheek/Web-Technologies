@@ -1,0 +1,23 @@
+.container{
+    background-color: lightblue;
+    box-sizing: border-box;
+    padding: 34px;
+
+
+}
+
+
+input,textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
