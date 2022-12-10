@@ -1,0 +1,61 @@
+body{
+
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 420px;
+    height: 420px;
+    background-color: #dc4c40;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
+    background-color:#367bf0;
+    border-radius: 50%;
+    border: 10px solid white;
+    z-index: 3;
+}
+
+.yellow{
+    position: absolute;
+    top: 31%;
+    left: 19%;
+    
+    width: 100%;
+    height: 100%;
+    background: #f7c43a;
+    z-index: 2;
+    transform: skewX(-30deg);
+}
+
+.yellow:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.green{
+    position: absolute;
+    top: 34%;
+    left: 20%;
+    
+    width: 100%;
+    height: 100%;
+    background: #0fa361;
+    z-index: 1;
+    transform: skewX(-40deg);
+}
