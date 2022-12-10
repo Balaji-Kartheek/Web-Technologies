@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <h2 style="text-align: center;">Day of the Week</h2>
+    <h3 style="text-align: center;">Enter the date</h3>
+<input type="date" id="get_date">
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="content"></p>
+
+<script>
+function myFunction() {
+
+  var y = new Date(document.getElementById("get_date").value)
+
+
+  if(y.getDay() ==0){
+    document.body.style.backgroundColor = "red"
+  }
+  if(y.getDay() ==1){
+    document.body.style.backgroundColor = "blue"
+  }
+  if(y.getDay() ==2){
+    document.body.style.backgroundColor = "green"
+  }
+  if(y.getDay() ==3){
+    document.body.style.backgroundColor = "yellow"
+  }
+  if(y.getDay() ==4){
+    document.body.style.backgroundColor = "purple"
+  }
+  if(y.getDay() ==5){
+    document.body.style.backgroundColor = "orange"
+  }
+  if(y.getDay() ==6){
+    document.body.style.backgroundColor = "grey"
+  }
+ 
+}
+</script>
+
+</body>
+</html>
