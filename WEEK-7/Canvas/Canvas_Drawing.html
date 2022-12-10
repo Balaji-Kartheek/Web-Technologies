@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas FreeHand Drawing</title>
+
+    <script>
+        
+
+        function initCanvas(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            
+            var status = document.getElementById("co_ordinates");
+
+            ctx.canvas.addEventListener('mousemove',function(event){
+                var X = event.clientX - ctx.canvas.offsetLeft;
+                var Y = event.clientY - ctx.canvas.offsetTop;
+
+                ctx.fillStyle = "#FFEEFF";
+
+                status.innerHTML = "X: "+X + " " +"Y: "+ Y;
+                //ctx.moveTo(100,50);
+                ctx.lineTo(X,Y);
+                ctx.stroke();
+        });
+
+            
+
+            ctx.canvas.addEventListener("click",function(event){
+                var X = event.clientX - ctx.canvas.offsetLeft;
+                var Y = event.clientY - ctx.canvas.offsetTop;
+
+                alert(X + " | " + Y)
+        });
+        }
+
+
+        window.addEventListener('load',function(event){
+                initCanvas();
+        });
+
+    </script>
+</head>
+<body>
+
+    
+    <canvas id="myCanvas" width="600" height="800" style="border:1px solid #000000; "></canvas>
+
+    <p>This is Program to show the co Ordinates</p>
+
+    <p id="co_ordinates">X: | Y: </p>
+
+    
+</html>

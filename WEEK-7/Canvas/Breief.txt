@@ -1,0 +1,42 @@
+The <canvas> element is only a container for graphics. You must use a script to actually draw the graphics.
+
+Canvas can respond to JavaScript events.
+
+Canvas can respond to any user action (key clicks, mouse clicks, button clicks, finger movement).
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+actions in the canvas border can be done with the JavaScript
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");                  // with properties and methods for drawing:
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);       //fillRect(x,y,width,height)    && fillStyle property can be a CSS color, a gradient, or a pattern.  Start at the upper-left corner (0,0) and draw a 150x75 pixels rectangle
+</script>
+
+
+
+Draw a Line
+
+moveTo(x,y) - defines the starting point of the line
+lineTo(x,y) - defines the ending point of the line
+ctx.stroke();    # like plt.show()
+
+Draw a Circle
+
+arc(x,y,r,startangle,endangle) - creates an arc/curve. To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI.
+The x and y parameters define the x- and y-coordinates of the center of the circle. The r parameter defines the radius of the Circle
+
+Add Text to the canvas page
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Comic Sans MS";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+
+Draw a Image
+
+ctx.drawImage(img, 10, 10);
