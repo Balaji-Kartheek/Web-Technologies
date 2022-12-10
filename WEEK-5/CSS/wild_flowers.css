@@ -1,0 +1,28 @@
+
+.f{
+    
+    text-align: center;
+    font-size: 200px;
+    font-style: italic;
+    left: 120px;
+    position: absolute;
+    text-shadow: 5px;
+}
+
+.wild{
+    font-size: 90px;    
+    color: red;
+    position: relative;
+    left: 160px;
+    top: 280px;
+    
+    
+}
+
+.lowers{
+    font-size: 90px;
+    color: green;
+    position: relative;
+    left: 140px;
+    top: 140px;
+}

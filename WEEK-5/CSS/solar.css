@@ -1,0 +1,295 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-size: 100%;
+    background-color: black;
+    /*background-image: url(../CSS/Planets/background2.jpg);*/
+}
+
+
+
+/*
+    sun
+*/
+.sun{
+    height: 120px;
+    width: 120px;
+    background-color: #f7a415;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-size: cover;
+    box-shadow: -4px 2px 56px #f9c05f;
+    transform: translate(-50%, -50%); /* for providing location at the center*/
+    animation: pulse-sun 2s infinite;
+}
+
+@keyframes pulse-sun{
+    from{
+        box-shadow: 0 0 0 0 #ff803790;
+    }
+    to{
+        box-shadow: 0 0 0 25px rgba(0,0,0,0);
+    }
+}
+
+/*
+    mercury
+*/
+
+.mercury{
+    height: 20px;
+    width: 20px;
+    background: #a94c2b;
+    background-image: url(../CSS/Planets/mercury.png);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 56px #eea30b;
+    left: 43.5%;
+    top: 43.5%;
+    transform: translate(-50%, -50%);
+    animation: orbit2 2s linear infinite;
+}
+
+@keyframes orbit2{
+    from{
+        transform: rotate(0deg)translateX(90px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(90px) rotate(-360deg);
+    }
+}
+
+
+.mercury-outline,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupyter-outline-1,
+.saturn-outline-1,.uranus-outline-1,.neptune-outline-1{
+
+    border-radius: 50%;
+    border: 3px dotted #ddd9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mercury-outline{
+    height: 180px;
+    width: 180px;
+}
+
+/*
+    venus
+*/
+
+.venus{
+    height: 30px;
+    width: 30px;
+    background-image: url(../CSS/Planets/venus.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 56px #e59710;
+    left: 43.5%;
+    top: 43.5%;
+    transform: translate(-50%, -50%);
+    animation: orbit3 4s linear infinite;
+}
+
+@keyframes orbit3{
+    from{
+        transform: rotate(0deg)translateX(122px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(122px) rotate(-360deg);
+    }
+}
+
+.venus-outline-1{
+    height: 240px;
+    width: 240px;
+}
+
+/*
+    Earth
+
+*/
+
+.earth{
+    height: 30px;
+    width: 30px;
+    background-image: url(../CSS/Planets/earth.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -2px 2px 20px lightblue;
+    left: 43.5%;
+    top: 43.5%;
+    transform: translate(-50%, -50%);
+    animation: orbit4 6s linear infinite;
+}
+
+@keyframes orbit4{
+    from{
+        transform: rotate(0deg)translateX(167px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(167px) rotate(-360deg);
+    }
+}
+
+.earth-outline-1{
+    height: 330px;
+    width: 330px;
+}
+
+/*
+    mars
+*/
+
+.mars{
+    height: 40px;
+    width: 40px;
+    background-image: url(../CSS/Planets/mars.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 30px rgb(237, 97, 97);
+    left: 43.5%;
+    top: 43.5%;
+    transform: translate(-50%, -50%);
+    animation: orbit5 8s linear infinite;
+}
+
+@keyframes orbit5{
+    from{
+        transform: rotate(0deg)translateX(214px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(214px) rotate(-360deg);
+    }
+    
+}
+
+.mars-outline-1{
+    height: 430px;
+    width: 430px;
+}
+
+/*
+    mars
+*/
+
+.jupyter{
+    height: 70px;
+    width: 70px;
+    background-image: url(../CSS/Planets/jupiter.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 56px rgb(173, 150, 108);
+    left: 44%;
+    top: 44%;
+    transform: translate(-50%, -50%);
+    animation: orbit6 10s linear infinite;
+}
+
+@keyframes orbit6{
+    from{
+        transform: rotate(0deg)translateX(280px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(280px) rotate(-360deg);
+    }
+}
+
+.jupyter-outline-1{
+    height: 570px;
+    width: 570px;
+}
+
+.saturn{
+    height: 50px;
+    width: 50px;
+    background-image: url(../CSS/Planets/suturn.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 56px rgb(80, 68, 68);
+    left: 46%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    animation: orbit7 15s linear infinite;
+}
+
+@keyframes orbit7{
+    from{
+        transform: rotate(0deg)translateX(330px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(330px) rotate(-360deg);
+    }
+}
+
+.saturn-outline-1{
+    height: 650px;
+    width: 650px;
+}
+
+
+.uranus{
+    height: 40px;
+    width: 40px;
+    background-image: url(../CSS/Planets/uranus.jpg);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 56px rgb(127, 127, 211);
+    left: 46%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    animation: orbit8 20s linear infinite;
+}
+
+@keyframes orbit8{
+    from{
+        transform: rotate(0deg)translateX(380px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(380px) rotate(-360deg);
+    }
+}
+
+.uranus-outline-1{
+    height: 750px;
+    width: 750px;
+}
+
+
+.neptune{
+    height: 50px;
+    width: 50px;
+    background-image: url(../CSS/Planets/neptune.webp);
+    background-size: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px 2px 56px rgb(127, 127, 211);
+    left: 46%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    animation: orbit9 25s linear infinite;
+}
+
+@keyframes orbit9{
+    from{
+        transform: rotate(0deg)translateX(440px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(440px) rotate(-360deg);
+    }
+}
+
+.neptune-outline-1{
+    height: 880px;
+    width: 880px;
+}

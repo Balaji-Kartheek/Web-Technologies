@@ -1,0 +1,89 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: black;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solar-system{
+    position: relative;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    animation: rotation 5s linear infinite;
+}
+
+
+.sun{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orange;
+    border-radius: 50%;
+    animation: pulse-sun 5s infinite;
+}
+
+
+.planet{
+    position: absolute;
+    top: -248px;
+    left: 50%;
+    height: 150px;
+    width: 150px;
+    transform: translate(-50%,0);
+    border: 1px solid lightgray;
+    border-radius: 50%;    
+
+}
+
+
+.earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightskyblue;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+
+
+
+@keyframes pulse-sun{
+    from{
+        box-shadow: 0 0 0 0 #ff803790;
+    }
+    to{
+        box-shadow: 0 0 0 25px rgba(0,0,0,0);
+    }
+}
+
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
