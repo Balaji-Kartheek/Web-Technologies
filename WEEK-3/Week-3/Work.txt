@@ -1,0 +1,15 @@
+-> Google
+-> Edge
+-> CSS shadow 
+-> photos
+-> wild flowers
+	Transitions
+-> newton's cradle
+-> lunar eclipse
+-> solar eclipse
+-> Z-index for relative positionating( 3d look)
+-> Traffic signal simulation
+
+
+
+-> lets intern

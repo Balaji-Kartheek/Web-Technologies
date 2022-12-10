@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport form</title>
+    <link rel="stylesheet" href="Passport.css">
+    <script>
+        function captchaGenerate(){
+            var strings = (Math.random()+1).toString(36).substring(2,7);
+            document.getElementById("captchaString").value = strings;
+            
+        }
+        function validate(){
+            var userString = document.getElementById("userString").value;
+            var captchaString = document.getElementById("captchaString").value;
+            if(userString === captchaString){
+                alert("Success");
+            }
+            else{
+                alert("failure");
+            }
+        }
+    </script>
+</head>
+<body onload="captchaGenerate()">
+    <div class="user_login">
+        <h3>User Registration</h3>
+        
+
+        <p><i>Fields marked with asterisk (<span class="mandatory">*</span>) are <b>mandatory</b></i></p>
+
+    </div>
+    
+    <form action="">
+        <h3 style="margin-left: 15px; color : red">New User Registration</h3>
+
+        <table class="form_table">
+            <tr>
+                <td>
+                    <p>Register to apply at<span class="mandatory">*</span></p>
+                </td>
+                <td>
+                    <input  type="radio" id = "CPV_Delhi" name ="register" value = "CPV Delhi">
+                    <label for="CPV Delhi">CPV Delhi</label><br>
+                    <input type="radio" id = "Passport_Office" name ="register" value = "Passport Office">
+                    <label for="Passport Office">Passport Office</label><br>
+                </td>
+            </tr>
+            <tr>
+                
+                <td>
+                    <p><b>Given Name </b><i style="font-size: 13px;">(Max 45 Characters)</i><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="text" name="user_name" id="user_name" required></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Surname </b><i style="font-size: 13px;">(Max 45 Characters)</i>
+                </td>
+                <td><input type="text" name="surname" id="surname"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Date of Birth(DD/MM/YYYY)</b><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="dob" required></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>E-mail Id </b><i style="font-size: 13px;">(Max 35 Characters)</i><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="email" name="user_email" id="user_email" required></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Do you want your Login Id to be same as E-mail Id?</p>
+                </td>
+                <td>
+                    <input type="radio" name="login_confirmation" id="login_confirmation"> Yes 
+                    <input type="radio" name="login_confirmation" id="login_confirmation"> No 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Login Id</b><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="text" name="login_id" id="login_id" required></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Password</b><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" required></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Confirm Password</b><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="password" name="confirm_password" id="confirm_password" required></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Hint Question</b><span class="mandatory">*</span></p>
+                </td>
+                <td>
+                    <select style="cursor: pointer;" name="hint_options" id="hint_options">
+                        <option value="">select hint questions</option>
+                        <option value="Q1">what is your favourite cricketer </option>
+                        <option value="Q2">what is your mother name</option>
+                        <option value="Q3">what is your house number</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Hint Answer</b><span class="mandatory">*</span>
+                </td>
+                <td>
+                    <input type="text" name="hint_answer" id="hint_answer" required></p>
+                </td>
+            </tr>
+                <tr>
+                    <td><p><b>Captcha</td>
+                    <td> <input type="text" id="captchaString" ></td>
+                    <th> <button type="button" onclick="captchaGenerate()">Refresh</button></th>
+                </tr>
+                <tr>
+                    <td><p><b>Enter above text<span class="mandatory">*</span></td>
+                    <td><input type="text" id="userString"  required></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" onclick="validate()">Check</button></td>
+                    <td></td>
+                </tr>
+            <!-- <tr>
+                <td>
+                    <p>Enter Characters Displayed<span class="mandatory">*</span></p>
+                </td>
+                <td>
+                    
+                    <input type="text" name="captcha" id="captcha">
+                     
+                </td>
+            </tr> -->
+        </table>      
+        <br>
+        <br>
+        <input style="margin-left: 250px;" class="submit" type="submit" value="Register">
+        <input style="margin-left: 10px;" class="reset" type="reset" value="Reset">
+    </form>
+</body>
+</html>

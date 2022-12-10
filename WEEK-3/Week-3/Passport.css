@@ -1,0 +1,66 @@
+*{
+    
+    padding: 0%;
+    box-sizing: border-box;
+    
+    
+}
+
+.user_login{
+    margin-left:50px;
+}
+
+.form_table{
+    border: 3px solid black;
+    border-radius:5%;
+    padding: 1.5em;
+    margin-left: 50px;
+}
+
+.mandatory{
+    color: red;
+}
+
+.refresh{
+    height: 15px;
+    width: 15px;
+}
+
+.sound{
+    height: 15px;
+    width: 15px;
+}
+
+#CPV_Delhi,#Passport_Office,#login_confirmation{
+    accent-color: rgb(104, 104, 255);
+}
+
+.submit,.reset{
+    border-radius: 7px;
+    padding: 0.6em 0.7em;
+    
+    font-size:large;
+    font-weight: bold;
+    transition-duration: 0.2s;
+    
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.submit:hover {
+    background-color: rgb(77, 255, 77);
+}
+.reset:hover {
+    background-color: lightblue;
+}
+
+.captcha .preview {
+    color:#555;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 8px;
+    border: 1px solid black;
+}
